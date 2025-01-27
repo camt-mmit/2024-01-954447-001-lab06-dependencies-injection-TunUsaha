@@ -1,0 +1,7 @@
+@if (data) {
+  <app-display-contacts [data]="data" class="app-cl-main-content" />
+} @else {
+  <p class="app-cl-main-content app-cl-warn">
+    <strong>No data in storage!!</strong>
+  </p>
+}

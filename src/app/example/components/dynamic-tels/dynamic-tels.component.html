@@ -1,0 +1,50 @@
+<header class="-cmp-header">
+  <button type="button" (click)="addTel()" class="app-cl-button app-cl-primary">
+    <i class="material-symbols-outlined">Add</i>
+  </button>
+
+  <label class="-cl-title">
+    <b>Contact
+      <span class="-cl-title-number app-cl-number">{{ labelNumber() }}</span></b
+    >
+    <input
+      type="text"
+      #nameInput
+      [value]="name()"
+      (change)="changeName(nameInput.value)"
+    />
+    <span>(<span class="app-cl-number">{{ numberOfTels() }}</span>)</span>
+  </label>
+
+  <button
+    type="button"
+    [disabled]="deletionDisabled()"
+    (click)="dataDelete.emit()"
+    class="app-cl-button app-cl-warn"
+  >
+    <i class="fas fa-trash"></i> X
+  </button>
+</header>
+
+@for (tel of tels(); track tel) {
+  <div class="-cmp-tel">
+    <label class="-cl-control">
+      <b class="-cl-title">Tel
+        <span class="-cl-title-number app-cl-number">{{ $index + 1 }}</span></b>
+      <input
+        type="text"
+        #inputTel
+        [value]="tel.value"
+        (change)="changeTelValue($index, inputTel.value)"
+      />
+    </label>
+    <button
+      type="button"
+      [disabled]="$count === 1"
+      (click)="deleteTel($index)"
+      class="app-cl-button app-cl-warn"
+    >
+      <i class="fas fa-trash"></i> X
+    </button>
+  </div>
+}

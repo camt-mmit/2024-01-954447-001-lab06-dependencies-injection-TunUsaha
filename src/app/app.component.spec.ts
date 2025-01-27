@@ -1,16 +1,16 @@
-import { provideExperimentalZonelessChangeDetection } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { provideExperimentalZonelessChangeDetection } from "@angular/core";
+import { TestBed } from "@angular/core/testing";
+import { AppComponent } from "./app.component";
 
-describe('AppComponent', () => {
+describe("AppComponent", () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
-      providers: [provideExperimentalZonelessChangeDetection()]
+      providers: [provideExperimentalZonelessChangeDetection()],
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it("should create the app", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
@@ -19,13 +19,15 @@ describe('AppComponent', () => {
   it(`should have the 'week-06' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('week-06');
+    expect(app.title).toEqual("week-06");
   });
 
-  it('should render title', () => {
+  it("should render title", () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, week-06');
+    expect(compiled.querySelector("h1")?.textContent).toContain(
+      "Hello, week-06",
+    );
   });
 });
