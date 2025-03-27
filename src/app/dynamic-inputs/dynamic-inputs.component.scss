@@ -1,0 +1,28 @@
+.dynamic-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  label {
+    flex-grow: 1;
+    margin-right: 10px;
+
+    input {
+      width: 100px;
+      margin-left: 5px;
+    }
+  }
+
+  button.remove {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ff1a1a;
+    }
+  }
+}

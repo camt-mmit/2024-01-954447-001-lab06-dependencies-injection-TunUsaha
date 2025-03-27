@@ -1,0 +1,33 @@
+.section-container {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .btn {
+    margin-right: 10px;
+  }
+
+  .inputs-container {
+    margin-top: 10px;
+  }
+
+  .total-display {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+}
+
+button.btn-success {
+  margin-bottom: 20px;
+}
+
+input[type='number'] {
+  width: 100px;
+  margin-right: 10px;
+}
